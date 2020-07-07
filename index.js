@@ -1,3 +1,6 @@
+  
+  const battleship = () => {
+  
   // Step 1: Create Players
   let player1 = {
     name: prompt('Enter your name'),
@@ -70,14 +73,14 @@ while (true) {
     // check the opponent's board to see if the space (array element) at those indices is a ship (is equal to 1).
       if (player2.gameBoard[hitX1][hitY1] === 1) {
         // If yes, "sink the ship" (change the value from 1 to 0)
-        player2.gameBoard[xPos2][yPos2] = 0;
+        player2.gameBoard[hitX1][hitY1] = 0;
         // decrement the opponent's ship count,
         player2.shipCount -= 1;
         console.log (player2.gameBoard);
         // and show an alert that says "Hit!"
-        alert (`HIt!`)
+        alert (`Hit!`)
       } else if (player2.shipCount === 0) {
-        alert (`Congratulations ${player1} you WIN!!!`)
+        alert (`Congratulations ${currentUser} you WIN!!!`)
         break;
       } else {
         alert (`You missed!`);
@@ -96,14 +99,14 @@ while (true) {
     // check the opponent's board to see if the space (array element) at those indices is a ship (is equal to 1).
       if (player1.gameBoard[hitX2][hitY2] === 1) {
         // If yes, "sink the ship" (change the value from 1 to 0)
-        player1.gameBoard[xPos1][yPos1] = 0;
+        player1.gameBoard[hitX2][hitX2] = 0;
         // decrement the opponent's ship count,
         player1.shipCount -= 1;
         console.log (player1.gameBoard);
         // and show an alert that says "Hit!"
-        alert (`HIt!`)
+        alert (`Hit!`)
       } else if (player1.shipCount === 0) {
-        alert (`Congratulations ${player2} you WIN!!!`)
+        alert (`Congratulations ${currentUser} you WIN!!!`)
         break;
       } else {
         alert (`You missed!`);
@@ -112,23 +115,13 @@ while (true) {
   }
 }
   
-  // console.log (JSON.stringify(Player2.gameBoard));
-
-  // console.log(xPos);
-  // Check if the board space (array element) at those coordinates has a ship or not:
-    // If not, "add a ship" (change the value from 0 to 1) and increment the total added ships counter
-    // If yes, let the loop continue (do nothing)
 
 
-  
 
-
-/*const battleship = () => {
-
-  return 'The winner is...?'
+  return `The winner is ${currentUser}`
 }
 
 const gameResult = battleship()
 
 const htmlTarget = document.getElementById('result')
-htmlTarget.innerHTML = gameResult */
+htmlTarget.innerHTML = gameResult 
