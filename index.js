@@ -1,5 +1,5 @@
   
-  const battleship = () => {
+const battleship = () => {
   
   // Step 1: Create Players
   let player1 = {
@@ -59,7 +59,7 @@
 // Step 3a: Ask the Player to Choose Strike Coordinates
  
 let currentUser = player1.name;
-let message;
+// let message;
 
 while (true) {
   if (currentUser === player1.name) {
