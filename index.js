@@ -61,7 +61,7 @@ const battleship = () => {
 let currentUser = player1.name;
 // let message;
 
-while (true) {
+while (player1.ships !== 0 || player2.ships !== 0) {
   if (currentUser === player1.name) {
     // Using the prompt() function, ask the current player to choose an x and y coordinate to strike.
     // You will need to store the user's input in a variable(s) for the next step.
